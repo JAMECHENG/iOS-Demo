@@ -1,0 +1,99 @@
+//
+//  PrefixHeader.pch
+//  LovingCar
+//
+//  Created by Jame on 15/7/16.
+//  Copyright (c) 2015年 Jame. All rights reserved.
+//
+
+#ifndef LovingCar_PrefixHeader_pch
+#define LovingCar_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//全局性的头文件
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <QuartzCore/QuartzCore.h>
+    #import "POP.h"
+
+    #import "BaseNavigationController.h"
+    #import "BaseViewController.h"
+    #import "BaseTabBarController.h"
+    #import "BaseMenuController.h"
+
+    #import "AppDelegate.h"
+    #import "AppDocument.h"
+    #import "AppInformation.h"
+    #import "AppHelper.h"
+    #import "TouchIDHelper.h"
+    #import "GCDHelper.h"
+
+    #import "PersonViewController.h"
+    #import "FirstViewController.h"
+    #import "LoginViewController.h"
+
+    #import "BaseService.h"
+    #import "UserService.h"
+    #import "ServiceFactory.h"
+    #import "Reachability.h"
+
+    #import "DBHelper.h"
+    #import "UserDBHelper.h"
+    #import "CarDBHelper.h"
+
+    #import "BaseModel.h"
+    #import "UserModel.h"
+    #import "CarModel.h"
+
+    #import "UIScrollView+Helper.h"
+    #import "UIView+Helper.h"
+    #import "UITableView+Helper.h"
+    #import "UILabel+Helper.h"
+    #import "NSDictionary+Helper.h"
+    #import "NSString+Helper.h"
+
+    #import "AppWindow.h"
+    #import "SecurityTextField.h"
+    #import "ProgressHUD.h"
+#endif
+
+/**
+ App中默认ViewController的背景颜色
+ **/
+#define BASEVIEWCONTROLLER_BACKGROUND_COLOR UICOLOR_FROM_RGB(239,239,244,1)
+
+/**
+ App中所有的Notification名称
+ **/
+#define NOTIFICATION_SESSION_TIME_OUT @"SESSION HAS TIME OUT"
+
+/**
+ App中默认的日期格式
+ **/
+#define NSDATE_DEFAULT_FORMART @"yyyy-MM-dd HH:mm:ss"
+
+/**
+ SQL AND & OR 运算符
+ **/
+#define SQL_AND_OPERATION   @"AND"
+#define SQL_OR_OPERATION    @"OR"
+
+/**
+ 所有的数据库表名
+ **/
+#define USER_TABLE @"UserList"
+#define CAR_TABLE @"CarList"
+#define MAINTENANCE_TABLE @"MaintenanceList"
+
+/**
+ 导航栏的高度
+ **/
+#define NAVIGTION_BAR_HEIGHT 64
+
+
+#endif
+
+
